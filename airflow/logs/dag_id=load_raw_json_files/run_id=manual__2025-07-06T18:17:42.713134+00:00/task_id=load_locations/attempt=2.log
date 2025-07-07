@@ -1,0 +1,17 @@
+{"timestamp":"2025-07-06T18:30:34.399943","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-07-06T18:30:34.400377","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-06T18:30:34.532437","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-06T18:30:34.532703","level":"warning","event":"empty cryptography key - values will not be stored encrypted.","logger":"airflow.models.crypto"}
+{"timestamp":"2025-07-06T18:30:34.532986","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-06T18:30:34.533106","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-06T18:30:34.760663","level":"info","event":"Loading JSON file from MinIO: locations.json","logger":"airflow.task.operators.operators.minio_to_clickhouse.MinIOToClickHouseOperator.MinIOToClickHouseOperator"}
+{"timestamp":"2025-07-06T18:30:34.760808","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-06T18:30:34.760992","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-06T18:30:34.761070","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-06T18:30:34.826062","level":"info","event":"Read 1773 rows and 3 columns from JSON.","logger":"airflow.task.operators.operators.minio_to_clickhouse.MinIOToClickHouseOperator.MinIOToClickHouseOperator"}
+{"timestamp":"2025-07-06T18:30:34.834466","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-06T18:30:34.834658","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow.sdk.execution_time.secrets_masker"}
+{"timestamp":"2025-07-06T18:30:34.834707","level":"info","event":"Connection Retrieved 'clickhouse_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-06T18:30:34.834782","level":"info","event":"Dropping existing table default.locations (if any)...","logger":"airflow.task.operators.operators.minio_to_clickhouse.MinIOToClickHouseOperator.MinIOToClickHouseOperator"}
+{"timestamp":"2025-07-06T18:30:34.841057","level":"info","event":"Creating table default.locations with schema: {'AirportCode': 'Nullable(String)', 'CountryName': 'Nullable(String)', 'Region': 'Nullable(String)'}","logger":"airflow.task.operators.operators.minio_to_clickhouse.MinIOToClickHouseOperator.MinIOToClickHouseOperator"}
+{"timestamp":"2025-07-06T18:30:34.857921","level":"info","event":"Inserted 1773 rows into default.locations","logger":"airflow.task.operators.operators.minio_to_clickhouse.MinIOToClickHouseOperator.MinIOToClickHouseOperator"}

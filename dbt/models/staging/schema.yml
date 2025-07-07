@@ -1,0 +1,109 @@
+version: 2
+
+sources:
+  - name: default   # Replace with actual ClickHouse database name
+    tables:
+      - name: transactions
+        description: "Raw transactions data containing flight itineraries and passenger details."
+      - name: locations
+        description: "Mapping of airport codes to countries and regions."
+
+models:
+  - name: stg_transactions
+    description: "Staging model for transactions with exploded segments."
+    columns:
+      - name: UniqueId
+        description: "Unique transaction identifier."
+        tests:
+          - not_null
+
+      - name: TransactionDateUTC
+        description: "Date and time of the transaction in UTC."
+      
+
+      - name: OriginAirportCode
+        description: "Origin airport code of the transaction."
+
+      - name: DestinationAirportCode
+        description: "Destination airport code of the transaction."
+
+      - name: OneWayOrReturn
+        description: "Indicates if the journey is one-way or return."
+
+      - name: DepartureAirportCode
+        description: "Departure airport for the segment."
+
+      - name: ArrivalAirportCode
+        description: "Arrival airport for the segment."
+
+      - name: SegmentNumber
+        description: "Segment number within the itinerary."
+
+      - name: LegNumber
+        description: "Leg number within the journey."
+
+      - name: NumberOfPassengers
+        description: "Number of passengers in the segment."
+
+  - name: stg_locations
+    description: "Staging model for locations (airports with country and region data)."
+    columns:
+      - name: AirportCode
+        description: "IATA code of the airport."
+        tests:
+          - unique
+          - not_null
+
+      - name: CountryName
+        description: "Name of the country for the airport."
+
+      - name: Region
+        description: "Region associated with the airport."
+
+  - name: int_transactions_enriched
+    description: "Intermediate model enriching transactions with country and region using locations mapping."
+    columns:
+      - name: UniqueId
+        description: "Unique transaction identifier."
+
+      - name: TransactionDateUTC
+        description: "Transaction date."
+
+      - name: OriginAirportCode
+        description: "Origin airport code."
+
+      - name: OriginCountry
+        description: "Country name of origin airport."
+
+      - name: DestinationAirportCode
+        description: "Destination airport code."
+
+      - name: DestinationCountry
+        description: "Country name of destination airport."
+
+      - name: OneWayOrReturn
+        description: "One Way or Return journey."
+
+      - name: NumberOfSegments
+        description: "Total number of segments in transaction."
+
+      - name: JourneyType
+        description: "'Domestic' or 'International' flag."
+
+  - name: mart_transactions_summary
+    description: "Mart model providing summary metrics for reporting."
+    columns:
+      - name: OriginCountry
+        description: "Country of transaction origin."
+
+      - name: TransactionCount
+        description: "Number of transactions originating from this country."
+
+      - name: DomesticTransactions
+        description: "Number of domestic transactions."
+
+      - name: InternationalTransactions
+        description: "Number of international transactions."
+
+      - name: AverageSegmentsPerTransaction
+        description: "Average number of segments per transaction."

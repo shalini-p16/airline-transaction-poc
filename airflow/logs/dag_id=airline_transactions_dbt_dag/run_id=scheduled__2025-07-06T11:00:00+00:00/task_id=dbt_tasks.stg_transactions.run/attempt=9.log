@@ -1,0 +1,60 @@
+{"timestamp":"2025-07-06T11:45:23.770219","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2025-07-06T11:45:23.770671","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/dbt_clickhouse_dag.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-06T11:45:23.776074","level":"info","event":"Trying to parse the dbt project using dbt ls cache cosmos_cache__airline_transactions_dbt_dag__dbt_tasks...","logger":"cosmos.dbt.graph"}
+{"timestamp":"2025-07-06T11:45:23.777553","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-06T11:45:23.821932","level":"info","event":"Cosmos performance: time to calculate cache identifier cosmos_cache__airline_transactions_dbt_dag__dbt_tasks for current version: 0.021491958003025502","logger":"cosmos.cache"}
+{"timestamp":"2025-07-06T11:45:23.822148","level":"info","event":"Cosmos performance [5280536688e4|83]: The cache size for cosmos_cache__airline_transactions_dbt_dag__dbt_tasks is 8342","logger":"cosmos.dbt.graph"}
+{"timestamp":"2025-07-06T11:45:23.822508","level":"info","event":"Cosmos performance: Cache hit for cosmos_cache__airline_transactions_dbt_dag__dbt_tasks - bfbf6284fdef3e544e88195fdf997795,7b6b28cf4fff879af90a0cc67fbff18c","logger":"cosmos.dbt.graph"}
+{"timestamp":"2025-07-06T11:45:23.822569","level":"info","event":"Total nodes: 10","logger":"cosmos.dbt.graph"}
+{"timestamp":"2025-07-06T11:45:23.822597","level":"info","event":"Total filtered nodes: 10","logger":"cosmos.dbt.graph"}
+{"timestamp":"2025-07-06T11:45:23.822645","level":"info","event":"Cosmos performance (airline_transactions_dbt_dag__dbt_tasks) -  [5280536688e4|83]: It took 0.0467s to parse the dbt project for DAG using LoadMode.DBT_LS_CACHE","logger":"cosmos.converter"}
+{"timestamp":"2025-07-06T11:45:23.824950","level":"info","event":"Project /opt/dbt does not have {'packages.yml', 'dependencies.yml'}","logger":"cosmos.dbt.project"}
+{"timestamp":"2025-07-06T11:45:23.828014","level":"info","event":"Cosmos performance (airline_transactions_dbt_dag__dbt_tasks) - [5280536688e4|83]: It took 0.00535s to build the Airflow DAG.","logger":"cosmos.converter"}
+{"timestamp":"2025-07-06T11:45:23.828126","level":"warning","event":"Pydantic serializer warnings:\n  PydanticSerializationUnexpectedValue(Expected `str` - serialized value may not be as expected [input_value={'version': 'bfbf6284fdef..._group_id': 'dbt_tasks'}, input_type=dict])","category":"UserWarning","filename":"/home/airflow/.local/lib/python3.12/site-packages/pydantic/main.py","lineno":463,"logger":"py.warnings"}
+{"timestamp":"2025-07-06T11:45:23.835882","level":"info","event":"Could not import dbtRunner. Falling back to subprocess for invoking dbt.","logger":"cosmos.operators.base"}
+{"timestamp":"2025-07-06T11:45:23.836277","level":"info","event":"Cloning project to writable temp directory /tmp/tmp6_126ss4 from /opt/dbt","logger":"cosmos.operators.base"}
+{"timestamp":"2025-07-06T11:45:23.837148","level":"info","event":"Profile caching is enable.","logger":"cosmos.config"}
+{"timestamp":"2025-07-06T11:45:23.838683","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-06T11:45:23.839044","level":"warning","event":"empty cryptography key - values will not be stored encrypted.","logger":"airflow.models.crypto"}
+{"timestamp":"2025-07-06T11:45:23.839169","level":"warning","event":"Skipping masking for a secret as it's too short (<5 chars)","logger":"airflow.sdk.execution_time.secrets_masker"}
+{"timestamp":"2025-07-06T11:45:23.839223","level":"info","event":"Connection Retrieved 'clickhouse_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-06T11:45:23.839530","level":"info","event":"Using real values for profile profile","logger":"cosmos.profiles.base"}
+{"timestamp":"2025-07-06T11:45:23.841121","level":"info","event":"Profile not found in cache storing and using profile: /tmp/cosmos/profile/bb37287b84e957ef876ef848e3bba02a4d6fb75b5fb14bc65a4aa25a1978a680/profiles.yml.","logger":"cosmos.config"}
+{"timestamp":"2025-07-06T11:45:23.841200","level":"info","event":"Trying to run the command:\n ['/home/airflow/dbt-venv/bin/dbt', '--no-partial-parse', 'run', '--models', 'stg_transactions', '--project-dir', '/tmp/tmp6_126ss4', '--profiles-dir', '/tmp/cosmos/profile/bb37287b84e957ef876ef848e3bba02a4d6fb75b5fb14bc65a4aa25a1978a680', '--profile', 'profile', '--target', 'dev']\nFrom /tmp/tmp6_126ss4","logger":"cosmos.operators.base"}
+{"timestamp":"2025-07-06T11:45:23.841268","level":"info","event":"Tmp dir root location: \n /tmp","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:23.841313","level":"info","event":"Running command: ['/home/airflow/dbt-venv/bin/dbt', '--no-partial-parse', 'run', '--models', 'stg_transactions', '--project-dir', '/tmp/tmp6_126ss4', '--profiles-dir', '/tmp/cosmos/profile/bb37287b84e957ef876ef848e3bba02a4d6fb75b5fb14bc65a4aa25a1978a680', '--profile', 'profile', '--target', 'dev']","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:23.849840","level":"info","event":"Command output:","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:25.110425","level":"info","event":"\u001b[0m11:45:25  Running with dbt=1.10.3","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:25.110912","level":"info","event":"\u001b[0m11:45:25  [\u001b[33mWARNING\u001b[0m]: Deprecated functionality","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:25.110983","level":"info","event":"Usage of `--models`, `--model`, and `-m` is deprecated in favor of","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:25.111011","level":"info","event":"`--resource-type model --select`","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:25.227258","level":"info","event":"\u001b[0m11:45:25  Registered adapter: clickhouse=1.9.2","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.041305","level":"info","event":"\u001b[0m11:45:26  [\u001b[33mWARNING\u001b[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.041400","level":"info","event":"There are 3 unused configuration paths:","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.041429","level":"info","event":"- models.staging","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.041452","level":"info","event":"- models.intermediate","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.041473","level":"info","event":"- models.marts","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.106456","level":"info","event":"\u001b[0m11:45:26  Found 4 models, 4 data tests, 2 sources, 476 macros","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.107396","level":"info","event":"\u001b[0m11:45:26","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.107661","level":"info","event":"\u001b[0m11:45:26  Concurrency: 1 threads (target='dev')","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.107824","level":"info","event":"\u001b[0m11:45:26","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.222105","level":"info","event":"\u001b[0m11:45:26  1 of 1 START sql view model `default`.`stg_transactions` ....................... [RUN]","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.263479","level":"info","event":"\u001b[0m11:45:26  1 of 1 OK created sql view model `default`.`stg_transactions` .................. [\u001b[32mOK\u001b[0m in 0.04s]","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.265265","level":"info","event":"\u001b[0m11:45:26","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.265400","level":"info","event":"\u001b[0m11:45:26  Finished running 1 view model in 0 hours 0 minutes and 0.16 seconds (0.16s).","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283047","level":"info","event":"\u001b[0m11:45:26","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283228","level":"info","event":"\u001b[0m11:45:26  \u001b[32mCompleted successfully\u001b[0m","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283361","level":"info","event":"\u001b[0m11:45:26","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283587","level":"info","event":"\u001b[0m11:45:26  Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283905","level":"info","event":"\u001b[0m11:45:26  [\u001b[33mWARNING\u001b[0m][DeprecationsSummary]: Deprecated functionality","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283948","level":"info","event":"Summary of encountered deprecations:","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283976","level":"info","event":"- ModelParamUsageDeprecation: 1 occurrence","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.283998","level":"info","event":"To see all deprecation instances instead of just the first occurrence of each,","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.284019","level":"info","event":"run command again with the `--show-all-deprecations` flag. You may also need to","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.284039","level":"info","event":"run with `--no-partial-parse` as some deprecations are only encountered during","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:26.284058","level":"info","event":"parsing.","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:27.031198","level":"info","event":"Command exited with return code 0","logger":"airflow.task.hooks.cosmos.hooks.subprocess.FullOutputSubprocessHook"}
+{"timestamp":"2025-07-06T11:45:27.031363","level":"info","event":"parsing.","logger":"cosmos.operators.base"}
+{"timestamp":"2025-07-06T11:45:27.039472","level":"info","event":"Inlets: []","logger":"cosmos.operators.base"}
+{"timestamp":"2025-07-06T11:45:27.039537","level":"info","event":"Outlets: []","logger":"cosmos.operators.base"}
+{"timestamp":"2025-07-06T11:45:27.039694","level":"info","event":"Assigning outlets with DatasetAlias in Airflow 3","logger":"cosmos.operators.local"}

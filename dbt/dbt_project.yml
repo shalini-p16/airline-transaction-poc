@@ -1,0 +1,37 @@
+name: 'airline_transactions'
+version: '1.0'
+profile: 'clickhouse'     # Make sure this matches your dbt profile name in profiles.yml
+config-version: 2
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_modules"
+
+# models:
+#   airline_transactions:
+#     staging:
+#       +materialized: view
+#       +schema: staging      # This controls where dbt places your staging models
+#     intermediate:
+#       +materialized: table
+#       +schema: intermediate
+#     marts:
+#       +materialized: table
+#       +schema: marts
+
+models:
+  staging:
+    +materialized: view
+    +schema: staging      # This controls where dbt places your staging models
+  intermediate:
+    +materialized: table
+    +schema: intermediate
+  marts:
+    +materialized: table
+    +schema: marts
