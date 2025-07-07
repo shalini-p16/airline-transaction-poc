@@ -2194,3 +2194,27 @@
 {"timestamp":"2025-07-07T10:50:40.498245","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
 {"timestamp":"2025-07-07T10:50:40.499201","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
 {"timestamp":"2025-07-07T10:50:40.499547","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-07T10:51:11.619228","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-07T10:51:11.717190","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-07T10:51:11.718067","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-07T10:51:11.718241","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-07T10:51:43.160949","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-07T10:51:43.264107","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-07T10:51:43.265070","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-07T10:51:43.265233","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-07T10:52:14.244553","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-07T10:52:14.352102","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-07T10:52:14.353155","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-07T10:52:14.353349","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-07T10:52:45.392777","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-07T10:52:45.492207","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-07T10:52:45.493180","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-07T10:52:45.493374","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-07T10:53:16.550221","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-07T10:53:16.649172","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-07T10:53:16.650141","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-07T10:53:16.650359","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
+{"timestamp":"2025-07-07T10:53:48.338012","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/load_raw_data.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2025-07-07T10:53:48.447750","level":"info","event":"Secrets backends loaded for worker","count":1,"backend_classes":["EnvironmentVariablesBackend"],"logger":"supervisor"}
+{"timestamp":"2025-07-07T10:53:48.448726","level":"info","event":"Connection Retrieved 'minio_conn'","logger":"airflow.hooks.base"}
+{"timestamp":"2025-07-07T10:53:48.448907","level":"info","event":"AWS Connection (conn_id='minio_conn', conn_type='aws') credentials retrieved from login and password.","logger":"airflow.providers.amazon.aws.utils.connection_wrapper.AwsConnectionWrapper"}
