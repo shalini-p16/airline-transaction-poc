@@ -1,4 +1,4 @@
-# Visit Analytics PoC
+# Airline Transaction PoC
 This project is PoC demonstrating how to load and analyze airline transactions data using an end-to-end data pipeline.
 It showcases the integration of several modern data tools—Apache Airflow for orchestration, MinIO for object storage, ClickHouse as the OLAP database, DBT for data transformation and modeling, and Metabase for data visualization. The pipeline ingests JSON files stored in MinIO, transforms the raw data via DBT models into analytics-ready marts, and visualizes key insights through automatically generated dashboards in Metabase.
 
@@ -78,7 +78,7 @@ http://localhost:8080/dags/airline_transactions_dbt_dag
 
 ### ERD Diagram
 
-![ERD-Diagram](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.githubusercontent.com/motazalratta/visit-analytics-poc/main/docs/raw-erd-diagram.iuml)
+
 
 1. **From which Country are most transactions originating? How many transactions is this?.**
 
